@@ -1,0 +1,153 @@
+.thumbnail {
+  width: 100%;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.channel-picture {
+  width: 50px;
+  vertical-align: top;
+}
+
+.profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@media (min-width: 1000px) {
+  .video-title a{
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.video-link{
+  text-decoration: none;
+  color: black;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+@media (min-width: 1000px) {
+  .video-author p,
+  .video-stats p{
+    font-size: 14px;
+  }
+}
+
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.video-time{
+  
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;;
+  right: 5px;
+}
+
+.profile-picture-container{
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-channel{
+  position: absolute;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: white;
+  width: 210px;
+  height: 70px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgb(203, 203, 203);
+  opacity: 0;
+  z-index: 300;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.profile-picture-container:hover .tooltip-channel{
+  opacity: 1;
+}
+
+.tooltip-channel .profile-picture-inside{
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+.author{
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, Arial;
+}
+
+.author-name{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.author-stats{
+  color: gray;
+  font-size: 14px;
+}
